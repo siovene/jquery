@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"
+      id="html">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<title>jQuery Performance Test Suite</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
+		      type="text/css"/>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<h1>jQuery Performance Tests
+					<small>Based on benchmark.js</small>
+				</h1>
+			</div>
+			<div class="well">
+				This page runs performance tests on various jQuery functions.
+				Each tests takes approximately <span id="opsPerSec">###</span>
+				seconds, so the estimated running time is
+				<span id="estimatedTime">###</span> seconds.
+			</div>
+
+			<div class="row">
+				<div class="span9">
+					<div id="starting">
+						<img src="working.gif"/>
+					</div>
+
+					<table id="tests" class="table table-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Test</th>
+								<th>Kilo ops/sec</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+
+					<textarea id="csv"></textarea>
+				</div> <!-- span -->
+
+				<div class="span3">
+					<div id="status">
+						<span id="icon">
+							<img src="working.gif"/>
+						</span>
+						<span id="progress">
+							Running test <span id="current">1</span> of
+							<span id="total">###</span>...
+						</span>
+					</div>
+
+					<div id="report"></div>
+
+					<div id="toggleCSV">
+						<button class="btn btn-primary">
+							<i class="icon-white icon-list"></i> Toggle CSV
+						</button>
+						<div class="alert alert-info">
+							&larr; Now you can copy the CSV data and paste it to
+							a file, for later analysis.
+						</div>
+					</div>
+				</div> <!-- span -->
+			</div> <!-- row -->
+		</div> <!-- container -->
+
+		<script src="../dist/jquery.min.js"></script>
+		<script src="vendor/benchmark.js"></script>
+		<script src="vendor/humanize.js"></script>
+
+		<script src="unit/globals.js"></script>
+		<script src="unit/functions.js"></script>
+		<script src="unit/core.js"></script>
+
+		<script src="init.js"></script>
+	</body>
+</html>
+
