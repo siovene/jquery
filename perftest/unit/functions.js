@@ -17,6 +17,10 @@ function benchmarkCycle(event, suite) {
 		$('#tests').show();
 	}
 
+	$('#estimatedTime').text(
+		(suite.length - event.target.id) *
+		Benchmark.options.maxTime);
+
 	$template.find('.number').text(event.target.id);
 	$template.find('.name').text(event.target.name);
 	$template.find('.hz').text(humanize.numberFormat(event.target.hz / 1000.0));
