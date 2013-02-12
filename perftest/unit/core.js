@@ -28,6 +28,27 @@ $(function() {
 	.add( "core: each()", function() {
 		g.core.set_of_p.each(function() {});
 	})
+	.add( "core: ready()", function() {
+		$.ready(function() {});
+	})
+	.add( "core: slice()", function() {
+		g.core.set_of_p.slice(2);
+	})
+	.add( "core: first()", function() {
+		g.core.set_of_p.first();
+	})
+	.add( "core: last()", function() {
+		g.core.set_of_p.last();
+	})
+	.add( "core: eq()", function() {
+		g.core.set_of_p.eq(1);
+	})
+	.add( "core: map()", function() {
+		g.core.set_of_p.map(function() {});
+	})
+	.add( "core: end()", function() {
+		g.core.set_of_p.end();
+	})
 
 	// add listeners
 	.on('start', function(event) { benchmarkStart(event, this); })
