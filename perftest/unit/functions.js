@@ -31,6 +31,7 @@ function benchmarkCycle(event, suite) {
 		event.target.hz + '"\n');
 
 	$('#status #progress #current').text(event.target.id + 1);
+	$('#progress .bar').width((event.target.id / suite.length * 100) + '%');
 }
 
 function benchmarkComplete(suite) {
