@@ -53,8 +53,5 @@ $(function() {
 	// add listeners
 	.on('start', function(event) { benchmarkStart(event, this); })
 	.on('cycle', function(event) { benchmarkCycle(event, this); })
-	.on('complete', function() { benchmarkComplete(this); })
-
-	// run async
-	.run({ 'async': true });
+	.on('complete', function() { benchmarkComplete(this); });
 });

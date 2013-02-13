@@ -2,6 +2,10 @@ function benchmarkStart(event, suite) {
 	$('#status #progress #total').text(suite.length);
 	$('#opsPerSec').text(Benchmark.options.maxTime);
 	$('#estimatedTime').text(suite.length * Benchmark.options.maxTime);
+
+	$('#progress').removeClass('hidden');
+	$('#starting').removeClass('hidden');
+	$('#status').removeClass('hidden');
 }
 
 function benchmarkCycle(event, suite) {

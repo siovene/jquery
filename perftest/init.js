@@ -1,6 +1,11 @@
 $(function() {
 	$('#progress #total').text(g.suite.length);
 
+	$('#run').click(function() {
+		$(this).addClass('hidden');
+		g.suite.run({'async': true});
+	});
+
 	$('#toggleCSV').click(function() {
 		$('#tests').toggle();
 		$('#csv').toggle();

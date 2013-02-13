@@ -20,21 +20,28 @@
 							<small>Based on benchmark.js</small>
 						</h1>
 					</div>
+
 					<div class="well">
 						This page runs performance tests on various jQuery functions.
 						Each tests takes approximately <span id="opsPerSec">###</span>
 						seconds, so the estimated running time is
 						<span id="estimatedTime">###</span> seconds.
 					</div>
-					<div id="progress" class="progress progress-striped">
+
+					<div id="progress" class="progress progress-striped hidden">
 						<div class="bar" style="width: 0%"></div>
 					</div>
+
+					<button id="run"
+					        class="btn btn-large btn-block btn-primary">
+						Run tests
+					</button>
 				</div> <!-- span -->
 			</div> <!-- row -->
 
 			<div class="row">
 				<div class="span9">
-					<div id="starting">
+					<div id="starting" class="hidden">
 						<i class="icon-time"></i>
 					</div>
 
@@ -55,7 +62,7 @@
 
 				<div class="span3">
 					<div id="sidebar" data-spy="affix">
-						<div id="status">
+						<div id="status" class="hidden">
 							<span id="icon">
 								<i class="icon-time"></i>
 							</span>
