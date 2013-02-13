@@ -36,6 +36,6 @@ function benchmarkCycle(event, suite) {
 function benchmarkComplete(suite) {
 	$('#status').remove();
 	$('#report').text("All tests completed.");
-	$('#report').addClass('text-success');
+	$('#report').addClass('alert alert-success');
 	$('#toggleCSV').show();
 }
